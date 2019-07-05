@@ -36,6 +36,8 @@
 
 		<preference name="FCM_CORE_VERSION" default="16.0.9" />
 		<preference name="FCM_VERSION" default="18.0.0" />
+		<preference name="GRADLE_VERSION" default="2.3.+" />
+		<preference name="GOOGLE_SERVICES_VERSION" default="3.0.0" />
 
 		<config-file target="AndroidManifest.xml" parent="/manifest/application">
 			<activity android:exported="true" android:name="com.gae.scaffolder.plugin.FCMPluginActivity" android:launchMode="singleTop">
@@ -87,7 +89,7 @@
 			<string>production</string>
 		</config-file>
 
-		<resource-file src="src/ios/GoogleService-Info.plist" target="Resources/GoogleService-Info.plist" />
+		<resource-file src="src/ios/Assets/GoogleService-Info.plist" target="Resources/GoogleService-Info.plist" />
 
 		<header-file src="src/ios/FCMPlugin.h" />
 		<source-file src="src/ios/FCMPlugin.m" />
