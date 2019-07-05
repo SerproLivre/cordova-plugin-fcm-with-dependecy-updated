@@ -3,10 +3,10 @@ def FCM_VERSION = System.getenv("FCM_VERSION") ?: rootProject.hasProperty("FCM_V
 
 buildscript {
     ext {
-        GRADLE_VERSION = System.getenv("GRADLE_VERSION") ?: rootProject.hasProperty("GRADLE_VERSION") ? rootProject.ext.GRADLE_VERSION : '2.3.+'
+        GRADLE_TOOLS_VERSION = System.getenv("GRADLE_TOOLS_VERSION") ?: rootProject.hasProperty("GRADLE_TOOLS_VERSION") ? rootProject.ext.GRADLE_TOOLS_VERSION : '2.3.+'
         GOOGLE_SERVICES_VERSION = System.getenv("GOOGLE_SERVICES_VERSION") ?: rootProject.hasProperty("GOOGLE_SERVICES_VERSION") ? rootProject.ext.GOOGLE_SERVICES_VERSION : '3.0.0'
 
-        ext.gradleNumberVersion = GRADLE_VERSION.substring(0, GRADLE_VERSION.lastIndexOf(".")).toFloat()
+        ext.gradleNumberVersion = GRADLE_TOOLS_VERSION.substring(0, GRADLE_TOOLS_VERSION.lastIndexOf(".")).toFloat()
     }
     repositories {
         mavenCentral()
@@ -17,7 +17,7 @@ buildscript {
         }
     }
     dependencies {
-        print("PROJECT GRADLE VERSION: ${GRADLE_VERSION}")
+        print("PROJECT GRADLE VERSION: ${GRADLE_TOOLS_VERSION}")
 
         classpath "com.android.tools.build:gradle:3.4.1"
 
